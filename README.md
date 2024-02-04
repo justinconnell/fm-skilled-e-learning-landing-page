@@ -1,6 +1,6 @@
 # Frontend Mentor - Skilled e-learning landing page solution
 
-This is a solution to the [Skilled e-learning landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Skilled e-learning landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q). 
 
 ## Table of contents
 
@@ -16,8 +16,6 @@ This is a solution to the [Skilled e-learning landing page challenge on Frontend
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,108 +27,72 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Desktop](./public/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/justinconnell/fm-skilled-e-learning-landing-page)
+- Live Site URL: [GitHub Page](https://justinconnell.github.io/fm-skilled-e-learning-landing-page)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
+- Semantic HTML
+- [Sass](https://sass-lang.com/) - CSS preprocessor
+- [Vite](https://vitejs.dev/) - Development workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+For this challenge I learned Sass and leveraged the ability to use functions and mixins to 'DRY' up the CSS code.
+I also took a workshop on SMACSS presented by [Jonathan Snook](https://frontendmasters.com/courses/smacss/) (founder of SMACSS)
+with the goal of applying some of the SMACSS principles to the CSS code organisation and architecture. I decided to use the 
+following ideas I learned about SMACSS for this project:
 
-To see how you can add code snippets, see below:
+- Separation of concerns in terms of keeping layout separate to component styling
+- Keep changes to base HTML to a minimal
+- Use class names and avoid ids - this makes the style more scalable
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+Naming is hard. To this end I decided to use BEM. With BEM, the CSS tends to grow and is rather verbose, but this is an acceptable
+tradeoff in favour of improved code readability - after all we write code for people and not machines.
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Vite is a great developer workflow tool and configuring Sass was as simple as installing it as a dev dependency and then adding
+an import to the root 'style.scss' file. There is no need to configure Sass compilers etc when using Vite. With Vite
+I am able to run a dev server and get realtime feedback on the code changes as I make them.
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I used React to separate out the page into it's constituent components. Furthermore, I also separated the content into as data file
+that could be used to dynamically build the underlying HTML, this results in a 'DRYer' HTML codebase. 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I will be applying the principles learned from SMACSS to CSS code architecture going forward - Also I will focus more
+on structuring HTML using semantic markup and learn more about what modern HTML elements can be used that provide more
+meaning to the underlying document elements.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+BEM is definitely a keeper and I will continue using BEM for future projects - my opinion is that it's a great tool for
+decoupling CSS from HTML.
+
+I plan to continue using Vite and React and developing my skills in that area.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+[Frontend Masters SMACSS course by Jonathan Snook](https://frontendmasters.com/courses/smacss/)
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+[Frontend Masters Sass Fundamentals course by Mike North](https://frontendmasters.com/courses/sass/)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- GitHub - [Justin](https://github.com/justinconnell)
+- Frontend Mentor - [@justinconnell](https://www.frontendmentor.io/profile/justinconnell)
+- Twitter - [@justin2code](https://twitter.com/justin2code)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+[Jonathan Snook](https://frontendmasters.com/courses/smacss/) - Thanks for presenting the workshop at Frontend Masters,
+this workshop has inspired me to treat CSS as a legitimate coding language and to take a more engineering-centric approach
+to structuring and authoring CSS.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
-
-Development principles:
-Separation of Concerns:
-
-- decouple CSS from HTML
-  single responsibnility
-
-Development tools and workflow:
-VS Code Vim emulator
-Vite
-React
-
-SMACSS and BEM:
-Architecture - code organisation loosely based on SMACSS principles where as the naming convention employs BEM
-What I have adopted from SMACSS is the principle of organising code into the following structure:
-
-- base - this refers to base HTML styles that affect the HTML elements directly.
-- components - contains the various UI component styling
-- layout - contains all the grids and layout styles
-- utils - contains all the variables, functions and mixins
-
-[Frontend Masters SMACSS course by Jonathan Snook](https://frontendmasters.com/courses/smacss/)
-[Frontend Masters Sass Fundamentals course by Mike North](https://frontendmasters.com/courses/sass/)
+[Mike North](https://frontendmasters.com/courses/sass/) - Thanks for delivering the 'Frontend Masters Sass Fundamentals' course
+, this course gave me enough base knowledge to implement functions, mixins and nest the Scss code appropriately.
