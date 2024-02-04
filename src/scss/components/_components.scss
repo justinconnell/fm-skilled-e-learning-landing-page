@@ -1,0 +1,222 @@
+@use "../common" as c;
+
+.header {
+  &__logo {
+    width: c.rem(89);
+
+    @include c.responsive(c.$break-point-desktop) {
+      width: c.rem(114);
+    }
+  }
+
+  &__button {
+    @include c.button;
+    background-color: c.$dark-blue;
+    padding: c.rem(10) c.rem(24);
+    @include c.text-style(c.$white, 800, c.rem(16), c.rem(28));
+
+    @include c.responsive(c.$break-point-desktop) {
+      @include c.text-style(c.$white, 800, c.rem(18), c.rem(28));
+      padding: c.rem(14) c.rem(30);
+    }
+
+    &:focus,
+    &:hover {
+      background-color: lighten(c.$dark-blue, 20%);
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+.hero-section {
+
+  &__cta {
+    grid-row: 1;
+
+    &__heading {
+      @include c.text-style(c.$dark-blue, 800, c.rem(40), c.rem(51));
+      margin-top: c.rem(20);
+      margin-left: c.rem(16);
+
+      @include c.responsive(c.$break-point-tablet) {
+        margin-top: c.rem(73);
+        margin-left: c.rem(37);
+      }
+
+      @include c.responsive(c.$break-point-desktop) {
+        @include c.text-style(c.$dark-blue, 800, c.rem(56), c.rem(72));
+        margin-top: c.rem(145);
+        margin-left: c.rem(165);
+      }
+    }
+
+    &__text {
+      @include c.text-style(c.$gray, 500, c.rem(16), c.rem(26));
+      margin-left: c.rem(16);
+      margin-top: c.rem(26);
+      padding-right: c.rem(16);
+
+      @include c.responsive(c.$break-point-tablet) {
+        margin-top: c.rem(23);
+        margin-left: c.rem(38);
+        padding-right: c.rem(30);
+      }
+
+      @include c.responsive(c.$break-point-desktop) {
+        @include c.text-style(c.$gray, 500, c.rem(18), c.rem(28));
+        margin-top: c.rem(29);
+        margin-left: c.rem(165);
+        padding-right: c.rem(130);
+      }
+    }
+
+    &__button {
+      @include c.button;
+      background-color: c.$gradient-orange;
+      @include c.vertical-linear-gradient(c.$gradient-orange, c.$gradient-pink);
+      padding: c.rem(14) c.rem(38);
+      margin-top: c.rem(23);
+      margin-left: c.rem(16);
+      @include c.text-style(c.$white, 800, c.rem(16), c.rem(28));
+
+      @include c.responsive(c.$break-point-tablet) {
+        margin-top: c.rem(25);
+        margin-left: c.rem(40);
+      }
+
+      @include c.responsive(c.$break-point-desktop) {
+        margin-top: c.rem(40);
+        margin-left: c.rem(165);
+        padding: c.rem(18) c.rem(38);
+      }
+
+      &:focus,
+      &:hover {
+        @include c.vertical-linear-gradient(
+                lighten(c.$gradient-orange, 20%),
+                lighten(c.$gradient-pink, 20%)
+        );
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    grid-row: 2;
+    object-fit: none;
+    position: absolute;
+    object-position: 50% 4%;
+
+    @include c.responsive(c.$break-point-tablet) {
+      position: absolute;
+      top: c.rem(52);
+      right: 0;
+      height: c.rem(484);
+      width: c.rem(400);
+      object-position: -2% 62%;
+    }
+
+    @include c.responsive(c.$break-point-desktop) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: c.rem(862);
+      width: c.rem(790);
+      object-position: -31% 192%;
+    }
+  }
+}
+
+.course-list {
+  margin-top: c.rem(36);
+
+  &__header {
+    @include c.vertical-linear-gradient(c.$gradient-orange, c.$gradient-pink);
+    @include c.card;
+    height: c.rem(122);
+
+    @include c.responsive(c.$break-point-tablet) {
+      height: c.rem(260);
+    }
+
+    @include c.responsive(c.$break-point-desktop) {
+      height: c.rem(322);
+      width: c.rem(350);
+    }
+  }
+
+  &__title {
+    @include c.text-style(c.$white, 800, c.rem(24), c.rem(32));
+    margin: auto 28px;
+
+    @include c.responsive(c.$break-point-tablet) {
+      margin-left: 30px;
+      margin-top: 56px;
+    }
+
+    @include c.responsive(c.$break-point-desktop) {
+      @include c.text-style(c.$white, 800, c.rem(32), c.rem(40));
+      margin-left: 30px;
+      margin-top: 67px;
+    }
+  }
+}
+
+.course {
+  background-color: c.$white;
+  &__title {
+    @include c.text-style(c.$dark-blue, 800, c.rem(20), c.rem(20));
+
+    @include c.responsive(c.$break-point-desktop) {
+      @include c.text-style(c.$dark-blue, 800, c.rem(24), c.rem(28));
+    }
+  }
+
+  &__description {
+    @include c.text-style(c.$gray, 500, c.rem(16), c.rem(26));
+
+    @include c.responsive(c.$break-point-desktop) {
+      @include c.text-style(c.$gray, 800, c.rem(18), c.rem(28));
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    @include c.text-style(c.$dark-pink, 800, c.rem(18), c.rem(28));
+  }
+}
+
+.footer {
+  &__logo {
+    width: c.rem(89);
+    @include c.responsive(c.$break-point-desktop) {
+      width: c.rem(114);
+    }
+  }
+
+  &__button {
+    @include c.button;
+    background-color: c.$gradient-blue;
+    @include c.vertical-linear-gradient(c.$gradient-blue, c.$gradient-pink);
+    padding: c.rem(10) c.rem(24);
+    @include c.text-style(c.$white, 800, c.rem(16), c.rem(28));
+
+    @include c.responsive(c.$break-point-desktop) {
+      @include c.text-style(c.$white, 800, c.rem(18), c.rem(28));
+      padding: c.rem(14) c.rem(30);
+    }
+
+    &:focus,
+    &:hover {
+      @include c.vertical-linear-gradient(
+              lighten(c.$gradient-blue, 20%),
+              lighten(c.$gradient-pink, 20%)
+      );
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
