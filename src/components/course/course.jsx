@@ -6,7 +6,7 @@ export default function Course({title, description, iconFile}) {
   return (
     <div className="course">
       <img className="course__icon" src={iconUrl} alt={title + " icon"}/>
-      <h4 className="course__title">{title}</h4>
+      <h3 className="course__title">{title}</h3>
       <p className="course__description">{description}</p>
       <a className="course__link" href="#">
         Get Started

@@ -14,9 +14,9 @@ export default function Courses() {
   return (
     <ul className="course-list">
       <li className="course-list__header">
-        <h3 className="course-list__title">
+        <h2 className="course-list__title">
           Check out our most popular courses!
-        </h3>
+        </h2>
       </li>
       {listItems.splice(0,5)}
     </ul>
